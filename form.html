@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<title> Registration or Sign Up form in HTML CSS | CodingLab </title>-->
+    <title>Farez</title>
+    <link rel="stylesheet" href="style2.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h2>All You Need is Data</h2>
+      <form action="#">
+        <div class="input-box">
+          <input type="text" id="name" placeholder="Enter your name" required />
+        </div>
+        <div class="input-box">
+          <input type="text" id="phone" placeholder="Enter your phone number / WhatsApp" required />
+        </div>
+        <div class="input-box">
+          <input type="text" id="address" placeholder="Enter your address" required />
+        </div>
+        <div class="input-box">
+          <!-- <select class="form-device" id="device">
+            <option>Your device</option>
+            <option>HDD</option>
+            <option>SSD</option>
+            <option>Memory Card</option>
+            <option>SD Card</option>
+            <option>Flash Drive</option>
+          </select> -->
+          <input type="text" id="device" placeholder="HDD/SSD/MEMORY CARD/FLASHDRIVE" required />
+        </div>
+        <div class="input-box">
+          <input type="text" id="size" placeholder="Enter your device size" required />
+        </div>
+        <!-- <div class="policy">
+          <input type="checkbox" />
+          <h3>I accept all terms & condition</h3>
+        </div> -->
+        <div class="input-box button">
+          <input type="button" onclick="whatsapp();" value="Let's Start Now" />
+        </div>
+        <div class="text">
+          <h3>Want to talk directly? <a href="https://wa.wizard.id/46f3e7">Chat now</a></h3>
+        </div>
+      </form>
+    </div>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <script>
+      function whatsapp() {
+        var name = document.getElementById('name').value;
+        var phone = document.getElementById('phone').value;
+        var address = document.getElementById('address').value;
+        var device = document.getElementById('device').value;
+        var size = document.getElementById('size').value;
+
+        var url = 'https://wa.me/6285219891357?text=' + '*Name:* ' + name + '%0a' + '*Phone:* ' + phone + '%0a' + '*Address:* ' + address + '%0a' + '*Device:* ' + device + '%0a' + '*Size:* ' + size;
+
+        window.open(url, '_blank').focus();
+      }
+    </script>
+  </body>
+</html>
